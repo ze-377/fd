@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./logincustomer.component.css']
 })
 export class LogincustomerComponent implements OnInit {
+  flag:Boolean=false
 
   constructor(private http:HttpClient) { }
   login(data){
@@ -14,6 +15,10 @@ export class LogincustomerComponent implements OnInit {
     }).subscribe((res:any)=>{
       console.log(res.msg)
     })
+  }
+  s(){
+    this.flag=true
+
   }
   ngOnInit() {
   }

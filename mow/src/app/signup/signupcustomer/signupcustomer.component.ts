@@ -12,7 +12,8 @@ export class SignupcustomerComponent implements OnInit {
       name:data.name,
       email:data.email,
       phone:data.phone,
-      password:data.password
+      password:data.password,
+      institute_name : data.institute
     }).subscribe((res:any)=>{
       console.log(res.msg)
     })

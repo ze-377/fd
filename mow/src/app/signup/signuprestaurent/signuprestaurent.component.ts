@@ -9,16 +9,11 @@ export class SignuprestaurentComponent implements OnInit {
   constructor(private http:HttpClient) { }
   signup(data){
     this.http.post("http://localhost:6363/restsign",{
-    name:data.name,
+    districtname:data.districtname,
     email:data.email,
     phone:data.phone,
-    rest_name:data.rest_name,
     password:data.password,
-    street:data.street,
-    lane:data.lane,
-    landmark:data.landmark,
-    city:data.landmark,
-    pincode:data.pincode
+   
     }).subscribe((res:any)=>{
       if(res.success){
         console.log(res.msg)
